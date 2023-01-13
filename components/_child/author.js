@@ -6,7 +6,7 @@ export default function author({ name, img, designation }) {
     <div className="author flex">
       <Image
         alt="img"
-        src={img || "/"}
+        src={img || ""}
         className="rounded-full"
         width={60}
         height={60}
