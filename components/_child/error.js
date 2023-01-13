@@ -6,6 +6,7 @@ export default function error() {
         Something Went Wrong
       </h1>
       <Image
+        alt="img"
         className="mx-auto"
         src={"/images/not_found.png"}
         height={400}

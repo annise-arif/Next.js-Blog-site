@@ -11,7 +11,7 @@ export default function Error() {
       >
         Back to Home
       </button>
-      <Image src="/error.png" height={0} width={1920}></Image>
+      <Image alt="img" src="/error.png" height={0} width={1920}></Image>
     </>
   );
 }
