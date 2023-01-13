@@ -13,6 +13,7 @@ export default function Page({ fallback }) {
   const router = useRouter();
   const { postId } = router.query;
   const { data, isLoading, isError } = fetcher(`api/posts/${postId}`);
+  console.log(data);
   if (isLoading) return <Spinner></Spinner>;
   if (isError) return <Error></Error>;
   return (
