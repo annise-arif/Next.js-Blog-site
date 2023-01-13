@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-export default function author() {
+export default function author({ name, img, designation }) {
+  if (!name && !img) return <></>;
   return (
     <div className="author flex">
       <Image
-        src={"/images/author/author1.jpg"}
+        src={img || "/"}
         className="rounded-full"
         width={60}
         height={60}
@@ -15,9 +16,11 @@ export default function author() {
           className="text-md font-bold text-gray-800 hover:text-gray-600"
         >
           {" "}
-          Flying High
+          {name || "No Name"}
         </Link>
-        <span className="text-sm text-gray-500">CEO and Founder</span>
+        <span className="text-sm text-gray-500">
+          {designation || "No Designation"}
+        </span>
       </div>
     </div>
   );
